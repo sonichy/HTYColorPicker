@@ -1,5 +1,5 @@
 # Qt 海天鹰颜色拾取器
-![alt](preview.png)  
+![alt](preview.jpg)  
 Linux 平台基于 Qt 的颜色拾取程序。  
 C键取色，点击RGB或Hex颜色值复制颜色文本，鼠标拖动移动界面，Ctrl+Q退出。  
 已编译好的 HTYColorPicker 程序适用64位Linux系统Qt5环境，双击运行，其他版本请自行编译。  
