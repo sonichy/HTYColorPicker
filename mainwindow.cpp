@@ -27,11 +27,9 @@ void MainWindow::mouseMoveEvent(QMouseEvent * event)
 void MainWindow::pickColor()
 {
     QPoint CP=QCursor::pos();
-    QString filename="colorPicker.png";
-    QPixmap pixmap=QPixmap::grabWindow(QApplication::desktop()->winId());
-    pixmap.save(filename);
     ui->labelPos->setText(QString::number(CP.x())+","+QString::number(CP.y()));
-    QImage image(filename);
+    QPixmap pixmap=QPixmap::grabWindow(QApplication::desktop()->winId());
+    QImage image=pixmap.toImage();
     QRgb RGB = image.pixel(CP.x(),CP.y());
     QPalette plt = ui->labelColor->palette();
     plt.setColor(QPalette::Background,QColor(RGB));
