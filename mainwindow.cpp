@@ -37,8 +37,8 @@ void MainWindow::pickColor()
     int r=qRed(RGB);
     int g=qGreen(RGB);
     int b=qBlue(RGB);
-    ui->pushButtonRGB->setText("RGB("+QString::number(r)+","+QString::number(g)+","+QString::number(b)+")");
-    ui->pushButtonHex->setText("#"+QString::number(r,16).toUpper()+QString::number(g,16).toUpper()+QString::number(b,16).toUpper());
+    ui->pushButtonRGB->setText("RGB(" + QString::number(r) + "," + QString::number(g) + "," + QString::number(b)+")");
+    ui->pushButtonHex->setText("#" + QString("%1").arg(r,2,16,QLatin1Char('0')).toUpper() + QString("%1").arg(g,2,16,QLatin1Char('0')).toUpper() + QString("%1").arg(b,2,16,QLatin1Char('0')).toUpper());
 }
 
 void MainWindow::on_pushButtonRGB_clicked()
