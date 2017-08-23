@@ -21,7 +21,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    void mouseMoveEvent(QMouseEvent * event);
+    bool m_bPressed;
+    QPoint m_point;
+    void mousePressEvent(QMouseEvent*);
+    void mouseMoveEvent(QMouseEvent*);
+    void mouseReleaseEvent(QMouseEvent*);
 
 private slots:
     void pickColor();

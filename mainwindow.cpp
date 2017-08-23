@@ -19,11 +19,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::mouseMoveEvent(QMouseEvent * event)
-{
-    move(event->globalX(),event->globalY());
-}
-
 void MainWindow::pickColor()
 {
     QPoint CP=QCursor::pos();
@@ -51,4 +46,25 @@ void MainWindow::on_pushButtonHex_clicked()
 {
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(ui->pushButtonHex->text());
+}
+
+void MainWindow::mousePressEvent(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton)
+    {
+        m_bPressed = true;
+        m_point = event->pos();
+    }
+}
+
+void MainWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    if(m_bPressed)
+        move(event->pos() - m_point + pos());
+}
+
+void MainWindow::mouseReleaseEvent(QMouseEvent *event)
+{
+    Q_UNUSED(event);
+    m_bPressed = false;
 }
