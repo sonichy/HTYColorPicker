@@ -6,6 +6,7 @@
 #include <QShortcut>
 #include <QDesktopWidget>
 #include <QClipboard>
+#include <QScreen>
 
 namespace Ui {
 class MainWindow;
@@ -19,17 +20,19 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private:
-    Ui::MainWindow *ui;
-    bool m_bPressed;
-    QPoint m_point;
+protected:
     void mousePressEvent(QMouseEvent*);
     void mouseMoveEvent(QMouseEvent*);
     void mouseReleaseEvent(QMouseEvent*);
 
+private:
+    Ui::MainWindow *ui;
+    bool m_bPressed;
+    QPoint m_point;
+
 private slots:
     void pickColor();
-    void on_pushButtonRGB_clicked();
+    void on_pushButtonRgb_clicked();
     void on_pushButtonHex_clicked();
 };
 

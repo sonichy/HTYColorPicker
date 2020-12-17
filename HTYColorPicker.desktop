@@ -1,10 +1,9 @@
 [Desktop Entry]
-Name=HTYColorPicker
-Comment=
+Name=海天鹰颜色拾取器
+Comment=海天鹰颜色拾取器
 Exec=/media/sonichy/job/HY/Linux/Qt/HTYColorPicker/HTYColorPicker
-Icon=/media/sonichy/job/HY/Linux/Qt/HTYColorPicker/icon.png
+Icon=/media/sonichy/job/HY/Linux/Qt/HTYColorPicker/HTYColorPicker.png
 Path=/media/sonichy/job/HY/Linux/Qt/HTYColorPicker
 Terminal=false
 Type=Application
-MimeType=
-Categories=
+Categories=Image;

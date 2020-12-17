@@ -1,5 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>icon.png</file>
+        <file>HTYColorPicker.png</file>
     </qresource>
 </RCC>
